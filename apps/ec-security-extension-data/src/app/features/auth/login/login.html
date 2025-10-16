@@ -1,1 +1,92 @@
-<p>Componente de Login, crearlo</p>
+<section class="contenido">
+  <article>
+    <div>
+      <img
+        class="logo_sd"
+        src="assets/logos/sd-sin-eslogan.png"
+        alt="SECURITY-DATA"
+      />
+    </div>
+    <article class="content-login">
+      <!-- Usuario -->
+      <div class="flex">
+        <div class="icon-login">
+          <img src="assets/images/LOGIN-21.png" alt="USER-SD" />
+        </div>
+        <div class="input-login">
+          <input
+            id="identificacionInput"
+            type="text"
+            placeholder="Cédula o Pasaporte"
+          />
+        </div>
+      </div>
+      <!-- Contraseña -->
+      <div class="flex">
+        <div class="icon-login">
+          <img src="assets/images/LOGIN-22.png" alt="PASS-SD" />
+        </div>
+        <!-- ver contraseña -->
+        <div class="flex relative">
+          <div class="input-login">
+            <input
+              id="passwordInput"
+              type="password"
+              placeholder="Contraseña"
+            />
+          </div>
+          <div class="icon-eyes">
+            <img id="toggleEye" src="assets/images/eyes-2.png" alt="USER-SD" />
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="recu-pass">
+      <!-- Recuperación de contraseña -->
+      <div>
+        <a
+          target="_blank"
+          href="https://portal-sd.securitydata.net.ec/app-security-data/#/auth/recuperar-password-security-data"
+          >¿Olvidaste tu contraseña?</a
+        >
+      </div>
+    </article>
+    <article>
+      <!-- ReCaptcha-->
+      <div class="captchaContainer">
+        <div class="wrapper">
+          <div class="captcha-area">
+            <div id="reloadCaptcha" class="reload-btn">
+              <img src="assets/images/reload.png" alt="RELOAD" />
+            </div>
+            <div class="captcha-img">
+              <span class="captcha">
+                <span id="numero1"></span>
+                <span id="operacion"></span>
+                <span id="numero2"></span>
+              </span>
+            </div>
+          </div>
+          <div class="equal-sign">=</div>
+          <div class="input-area">
+            <input
+              class="input-captcha"
+              id="inputCaptcha"
+              type="text"
+              placeholder="Respuesta"
+              name="captcha"
+              maxlength="4"
+            />
+          </div>
+        </div>
+        <p id="captchaError" class="text-danger">
+          La respuesta del CAPTCHA es incorrecta
+        </p>
+      </div>
+    </article>
+    <article class="btn-ingresar">
+      <!-- Ingresar -->
+      <button id="btnlogin" class="btn-green-general">Ingresar</button>
+    </article>
+  </article>
+</section>
