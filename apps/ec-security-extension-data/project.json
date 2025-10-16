@@ -29,6 +29,11 @@
           {
             "glob": "favicon.ico",
             "input": "apps/ec-security-extension-data/public"
+          },
+          {
+            "glob": "manifest.json",
+            "input": "apps/ec-security-extension-data/src",
+            "output": "."
           }
         ],
         "styles": [

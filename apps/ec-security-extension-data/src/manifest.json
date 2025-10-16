@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "EC Security Extension Data",
+  "description": "Microfrontend Angular Shell con Login",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "32": "assets/icons/icon32.png"
+    }
+  },
+  "icons": {
+    "32": "assets/icons/icon32.png"
+  },
+  "permissions": [],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
