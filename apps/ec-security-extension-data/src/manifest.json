@@ -1,19 +1,42 @@
 {
   "manifest_version": 3,
-  "name": "EC Security Extension Data",
-  "description": "Microfrontend Angular Shell con Login",
+  "name": "EC Security Extension",
+  "description": "Extensión con login y visor de PDFs integrados",
   "version": "1.0",
+  "icons": {
+    "32": "assets/icons/icon32.png"
+  },
   "action": {
     "default_popup": "index.html",
     "default_icon": {
       "32": "assets/icons/icon32.png"
     }
   },
-  "icons": {
-    "32": "assets/icons/icon32.png"
-  },
-  "permissions": [],
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "webRequest",
+    "webNavigation"
+  ],
   "host_permissions": [
     "<all_urls>"
-  ]
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "apps/pdf-viewer/**",
+        "assets/**"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
 }
